@@ -151,10 +151,10 @@ class AudioService {
     _levelTimer = Timer.periodic(const Duration(milliseconds: 100), (_) async {
       try {
         final amp = await _recorder.getAmplitude();
-        // amp.current is in dBFS (typically –160 to 0).  Normalise to 0–1.
-        final normalised = ((amp.current + 60) / 60).clamp(0.0, 1.0);
+        // amp.current is in dBFS (typically –160 to 0).  Normalize to 0–1.
+        final normalized = ((amp.current + 60) / 60).clamp(0.0, 1.0);
         _levelController.add(
-          AudioLevel(level: normalised, timestamp: DateTime.now()),
+          AudioLevel(level: normalized, timestamp: DateTime.now()),
         );
       } catch (_) {}
     });

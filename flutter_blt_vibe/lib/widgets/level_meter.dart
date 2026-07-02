@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// A colour-coded audio VU meter.
+/// A color-coded audio VU meter.
 ///
 /// The bar transitions through green → orange → red as the level rises:
 ///   0 – 60 %  → green

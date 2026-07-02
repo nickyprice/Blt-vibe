@@ -49,7 +49,7 @@ class BltVibeApp extends StatelessWidget {
 
   ThemeData _buildTheme(Brightness brightness) {
     final colorScheme = ColorScheme.fromSeed(
-      seedColor: const Color(0xFF1565C0), // Deep blue brand colour
+      seedColor: const Color(0xFF1565C0), // Deep blue brand color
       brightness: brightness,
     );
     return ThemeData(
