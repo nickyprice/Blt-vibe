@@ -1,0 +1,64 @@
+{
+  "audio": {
+    "device": "USB Mixer",
+    "sample_rate": 44100,
+    "channels": 2,
+    "bit_depth": 16,
+    "buffer_size": 2048
+  },
+  "streaming": {
+    "shoutcast": {
+      "enabled": true,
+      "host": "stream.example.com",
+      "port": 8000,
+      "mount_point": "/stream",
+      "password": "your_password_here",
+      "bitrate": 128,
+      "codec": "MP3"
+    },
+    "icecast": {
+      "enabled": false,
+      "host": "icecast.example.com",
+      "port": 8000,
+      "mount_point": "/stream",
+      "password": "your_password_here",
+      "bitrate": 128,
+      "codec": "OGG"
+    }
+  },
+  "metadata": {
+    "source": "playit_live",
+    "playit_live": {
+      "api_url": "http://localhost:7601/",
+      "polling_interval": 2
+    },
+    "virtual_dj": {
+      "api_url": "http://localhost:8099/",
+      "polling_interval": 2
+    },
+    "manual": {
+      "artist": "Your Name",
+      "title": "Live Show",
+      "on_air": "DJ Name"
+    }
+  },
+  "recording": {
+    "enabled": true,
+    "output_directory": "./recordings",
+    "filename_format": "blt_vibe_%Y%m%d_%H%M%S.wav",
+    "codec": "WAV"
+  },
+  "ui": {
+    "theme": "light",
+    "window_width": 800,
+    "window_height": 600,
+    "always_on_top": false,
+    "start_minimized": false
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "blt_vibe.log",
+    "max_size_mb": 10,
+    "backup_count": 3
+  }
+}
